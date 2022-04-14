@@ -18,7 +18,7 @@ This may be mitigated by starting with a list that has between 10 and 30 numbers
 - Implement starting list removal to reduce players' ability to game the cycles
 
 ## Update log
-[14/04/2022] Visual update
+**[14/04/2022] Visual update**
 - Updated array to store pairs of numbers rather than sums, to allow for dice images
 - Added dice face images for easier recognition on smaller screens
 - Added turn counter so players know how far through the game they are
