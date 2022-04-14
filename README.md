@@ -15,5 +15,10 @@ It is possible to some degree to count the number of times each combination has 
 This may be mitigated by starting with a list that has between 10 and 30 numbers *randomly removed*. If users do not know how many numbers are removed they will not be able to count and use this knowledge to their advantage. If the removed numbers are re-inserted later in the game, the probabilities would still even out provided the game lasts at least 72 turns.
 
 ## Todo list
-- Add dice face images to make rolls clearer than a single number printed to the screen
 - Implement starting list removal to reduce players' ability to game the cycles
+
+## Update log
+**[14/04/2022] Visual update**
+- Updated array to store pairs of numbers rather than sums, to allow for dice images
+- Added dice face images for easier recognition on smaller screens
+- Added turn counter so players know how far through the game they are
