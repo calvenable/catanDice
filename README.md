@@ -11,13 +11,20 @@ Every possible combination of two dice is put into an array. It looks like this:
 
 When **Enter** is pressed, a random number is removed from this list and presented as the dice roll for that turn. When the list is empty, it is repopulated as above and the process continues. This ensures that every number appears exactly the expected number of times in every 36 turns of the game. Naturally the average game does not last an exact multiple of 36 turns, so there is still an element of randomness, but it removes the possibility of a disproportionate occurrence of any one number.
 
+In order to avoid people making a note of how many rolls have occurred and using the set of 36 rolls to their advantage, the program starts the game at a random point in a cycle/set (making  a list of 36 combinations and removing some at random), so the point at which a new cycle starts is not determinable but the probabilities are still close to expected. The combinations that are removed are later replaced so the expected number of each roll after 72 is the same as if it had been two complete sets.
+
 ## Problems with the current solution
-While complication has been added to prevent abuse of occurrence counting every 36 turns, this only offsets the predictability. The program resorts to cycles of 36 after 72 turns, so players intent on counting could attempt to use this to their advantage. However, this seems unlikely to happen.
+Some would argue that this goes against the fundamental idea of probability: with this program, when a 6 is rolled, the next roll is statistically less likely to be a 6. While this follows natural human inclination, it is not accurate to the laws of probability - with two real dice, after a 6, the next roll is still 5/36 likely to be a 6, regardless of previous rolls. However, the purpose of this program is to remove some of the bias in dice rolling which makes games like Catan so annoying in the long run, making this qualm a rather moot point. Those wishing for probabilistic integrity should continue using real dice!
+
+While complication has been added to prevent abuse of occurrence counting every 36 turns, this only offsets the predictability. The program resorts to cycles of 36 after 72 turns, so players intent on counting could attempt to use this to their advantage. However, this seems unlikely to happen, especially since most games of Catan do not last more than 72 turns.
 
 ## Todo list
-- Add indication of when dice are rolled - sequential identical rolls are indistinguishable
+- No scheduled improvements
 
 ## Update log
+**[15/04/2022] Visual update**
+- Added indication of when dice are rolled since sequential, identical rolls were previously indistinguishable. Dice now appear in one of three hard-coded locations.
+
 **[14/04/2022] Functionality update**
 - Removed turn counter information due to possible advantages
 - Implemented staggered roll list formation: starting list of all possibilities is split in two, with **(n-x)** pairs used at the start and **x** pairs re-inserted after a complete cycle has been performed, to make it useless to count the rolls

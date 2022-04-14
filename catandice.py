@@ -43,6 +43,8 @@ diceImages = [
   ]
 ]
 
+diceArrangement = 1
+
 def populateArrayWithPairs():
   arr = []
   for i in range(1,7):
@@ -66,11 +68,37 @@ def moveRandomPairs(oldArray:list, newArray:list):
 
 
 def printDiceImage(die1, die2):
-  print("\n   =======     ======= ")
-  print("  " + diceImages[die1-1][0] + "   " + diceImages[die2-1][0])
-  print("  " + diceImages[die1-1][1] + "   " + diceImages[die2-1][1])
-  print("  " + diceImages[die1-1][2] + "   " + diceImages[die2-1][2])
-  print("   =======     ======= \n")
+  global diceArrangement
+  if (diceArrangement == 1):
+    # Print dice in line
+    print("\n   =======     ======= ")
+    print("  " + diceImages[die1-1][0] + "   " + diceImages[die2-1][0])
+    print("  " + diceImages[die1-1][1] + "   " + diceImages[die2-1][1])
+    print("  " + diceImages[die1-1][2] + "   " + diceImages[die2-1][2])
+    print("   =======     ======= \n")
+    diceArrangement = 2
+
+  elif (diceArrangement == 2):
+    # Print left die higher
+    print("\n  =======")
+    print(" " + diceImages[die1-1][0])
+    print(" " + diceImages[die1-1][1] + "     =======")
+    print(" " + diceImages[die1-1][2] + "    " + diceImages[die2-1][0])
+    print("  =======     " + diceImages[die2-1][1])
+    print("              " + diceImages[die2-1][2])
+    print("               ======= \n")
+    diceArrangement = 3
+
+  elif (diceArrangement == 3):
+    # Print right die higher
+    print("\n                =======")
+    print("    =======    " + diceImages[die2-1][0])
+    print("   " + diceImages[die1-1][0] + "   " + diceImages[die2-1][1])
+    print("   " + diceImages[die1-1][1] + "   " + diceImages[die2-1][2])
+    print("   " + diceImages[die1-1][2] + "    =======")
+    print("    ======= \n")
+    diceArrangement = 1
+
 
 def rollDicePair(dicePairArray):
   choice = random.choice(dicePairArray)
