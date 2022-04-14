@@ -15,7 +15,7 @@ When **Enter** is pressed, a random number is removed from this list and present
 While complication has been added to prevent abuse of occurrence counting every 36 turns, this only offsets the predictability. The program resorts to cycles of 36 after 72 turns, so players intent on counting could attempt to use this to their advantage. However, this seems unlikely to happen.
 
 ## Todo list
-- No improvements scheduled
+- Add indication of when dice are rolled - sequential identical rolls are indistinguishable
 
 ## Update log
 **[14/04/2022] Functionality update**
