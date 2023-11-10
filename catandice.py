@@ -1,12 +1,14 @@
 import random
 
-print("\n   Welcome to CatanDice! This program simulates die rolls so you don't have to!")
-print("   All the possible rolls are shuffled into a deck with the right probabilities.")
-print("  All you have to do is press Enter when you want a new roll, and a random one is")
-print("    selected from the deck. Once all the possibilities are used up, the deck is")
-print("  remade and you can continue playing, safe in the knowledge that every roll will")
-print("turn up exactly the number of times you want it to within 36 turns. Happy settling!")
-print("                       Type 'quit' to exit gracefully.\n")
+print("""
+          Welcome to CatanDice! This program simulates die rolls so you don't have to!
+          All the possible rolls are shuffled into a deck with the right probabilities.
+                Just press Enter when it's your turn to roll, and a random one is
+          selected from the deck. Once all the possibilities are used up, the deck is
+        remade and you can continue playing, safe in the knowledge that every roll will
+       turn up exactly the number of times you want it to within 36 turns. Happy settling!
+                              Type 'quit' to exit gracefully.
+""")
 
 # •, ⦾, and ⦿ are possibilities but not ASCII/Terminal friendly
 
